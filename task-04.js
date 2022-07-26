@@ -1,17 +1,15 @@
-const targetBtn = document.querySelector("#value");
-const valueEl = Number(document.querySelector("#value").textContent);
-const counterValue = document.querySelector("#value");
-
-const parentDivEL = document.querySelector("#counter");
-const decrBtn = parentDivEL.firstElementChild;
-const incrBtn = parentDivEL.lastElementChild;
+const span = document.querySelector("#value");
+const decrBtn = document.querySelector('[data-action="decrement"]');
+const incrBtn = document.querySelector('[data-action="increment"]');
 
 incrBtn.addEventListener("click", () => {
-  valueEl += 1;
-  counterValue.innerText = valueEl;
+  let counterValue = parseInt(span.textContent);
+  counterValue += 1;
+  span.textContent = counterValue;
 });
 
 decrBtn.addEventListener("click", () => {
-  valueEl -= 1;
-  counterValue.innerText = valueEl;
+  let counterValue = parseInt(span.textContent);
+  counterValue -= 1;
+  span.textContent = counterValue;
 });

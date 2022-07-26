@@ -18,7 +18,7 @@ console.log(list);
 
 const markup = images.reduce(
   (acc, { alt, url }) =>
-    (acc += `<li><img src=${url} alt=${alt} width=300 height=300></li>`),
+    (acc += `<li><img src=${url} alt="${alt}" width=300 height=300></li>`),
   ""
 );
 list.insertAdjacentHTML("afterbegin", markup);
